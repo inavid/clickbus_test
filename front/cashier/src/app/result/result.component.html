@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="jumbotron text-center">
+        	<h1>¡Vuelve pronto!</h1> 
+        	<p>Los billetes entregados son</p> 
+        	<button class="btn btn-block btn-danger" (click)="salir()">Salir</button>
+        </div>
+    </div>
+    <div class="row" *ngFor="let object of readable;">
+    	<div class="col-xs-3"></div>
+    	<div class="col-xs-6">
+    		<div class="thumbnail">
+    		  <img width="300" height="300" src="/assets/{{object.denominacion}}.jpeg" alt="">
+    		  <div class="caption text-center">
+    		    <h3>{{object.cantidad}} billetes de {{object.denominacion}}</h3>
+    		  </div>
+    		</div>
+    	</div>
+    	<div class="col-xs-3"></div>
+    </div>
+    <div></div>
+</div>
